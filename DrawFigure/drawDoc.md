@@ -16,9 +16,7 @@ $$
 ### to draw a rectangle, we will use:
 
 $$
-
 cv.rectangle(blank,\overset{\text{Starting Point}}{\overbrace{(21,67)}},\overset{\text{End Point}}{\overbrace{(300,300)}},(\overset{\text{color (bgr)}}{\overbrace{0,255,0}}),\overset{\text{thickness}}{\overbrace{3}})
-
 $$
 
 
