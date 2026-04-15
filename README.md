@@ -1,6 +1,10 @@
 # Computer-Visions
 My Goal is to make a program that can calculate distance an object from camera.
 
+i'm using [
+OpenCV Course - Full Tutorial with Python](https://www.youtube.com/watch?v=oXlwWbU8l2o) by freeCodeCamp.org as my tutor.. so if you want to learn more, you can go there...
+
+
 we will gonna use cv2 and os more often here...
 
 at First, i learned how computer read , then create a windows to show what they read 
@@ -10,7 +14,7 @@ img = cv2.imread('File Path')
 cv2.imshow("Gambar",img)
 ```
 (.imread) is used to read that file, while (.imshow) is used to show the image to a tab
-. You can see my results in [Here]("")
+. You can see my results in View tab.py
 ###
 then i tried to view the video/gif using python.. and the code is:
 ``` 
@@ -118,4 +122,6 @@ capture.release()
 cv2.destroyAllWindows()
 
 ```
+
+Watch and try it by yourself in View Tab.py and video-viewer.py
 Now we know how to display media, now its time to [draw something](DrawFigure/drawDoc.md) to the Window
