@@ -4,7 +4,7 @@ import numpy as np
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
-file_path = os.path.join(base_dir, 'figures', 'triple t.jpg')
+file_path = os.path.join(base_dir,"..",'Read image and video', 'figures', 'triple t.jpg')
 
 blank = np.zeros((500,500,3), dtype='uint8')
 cv.imshow('kosong',blank)
@@ -31,10 +31,21 @@ cv.fillPoly(blank,[pts],(255,0,255),cv.LINE_AA,0,(100,0))
 
 #draw a white hello world text with hershey simplex font that start from (67,500) (its in bottom left in the text), scale 2  and 5px thickness
 font = cv.FONT_HERSHEY_SIMPLEX
-cv.putText(blank,'Hello World',(67,400), font, 2,(255,255,255),5,cv.LINE_4,False)#true means normal text
+cv.putText(blank,'Hello World',(67,400), font, 2,(255,255,255),5,cv.LINE_4,False)#False means Normal text
 
 #draw a white Its me, Riko text with HERSHEY COMPLEX SMALL font that start from (67,500) , scale 2  and 5px thickness
 cv.putText(blank,'Its me, Riko',(67,400), cv.FONT_HERSHEY_COMPLEX_SMALL, 2,(255,255,255),5,cv.LINE_AA,True) #true means mirrorred horizontally text
 
 cv.imshow('Penuh',blank)
+
+img = cv.imread(file_path)
+
+#you can also add draw in pictures
+cv.fillPoly(img,[pts],(255,0,255),cv.LINE_AA,0,(100,0))
+cv.ellipse(img,(130,50),(75,50),90,0,360,(0,0,255),2)
+cv.putText(img,'Tung tung tung Sahur',(0,100), font, 0.5,(0,255,255),1,cv.LINE_4,False)#true means flipped text
+
+#now show it
+cv.imshow('Bergambar',img)
+
 cv.waitKey(0)
